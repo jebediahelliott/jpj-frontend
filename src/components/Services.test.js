@@ -4,7 +4,7 @@ import Services from './Services';
 
 describe('<Services />', () => {
   it('Renders a title', () => {
-    const wrapper = shallow(<Services />)
-    expect(wrapper.find('h1').text()).toMatch(/Services/)
+    const wrapper = shallow(<Services />);
+    expect(wrapper.find('h1').text()).toMatch(/Services/);
   })
 })

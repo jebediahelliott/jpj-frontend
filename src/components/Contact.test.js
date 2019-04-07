@@ -4,7 +4,7 @@ import Contact from './Contact';
 
 describe('<Contact />', () => {
   it('Renders a title', () => {
-    const wrapper = shallow(<Contact />)
-    expect(wrapper.find('h1').text()).toMatch(/Contact Us/)
+    const wrapper = shallow(<Contact />);
+    expect(wrapper.find('h1').text()).toMatch(/Contact Us/);
   })
 })
