@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Navbar extends Component {
 
   render() {
     return (
-      <div>
-        <a href="/home">Home</a>
-        <a href="/about">About</a>
-        <a href="/services">Services</a>
-        <a href="/contact">Contact</a>
-        <a href="/login">Log In</a>
+      <div id="navBar">
+        <Link to="/home">Home</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/login">Log In</Link>
       </div>
     )
   }
