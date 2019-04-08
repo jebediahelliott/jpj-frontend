@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
-import Home from '../components/Home'
-import About from '../components/About'
-import Services from '../components/Services'
-import Contact from '../components/Contact'
-import Navbar from '../components/Navbar'
+import Home from '../components/Home';
+import About from '../components/About';
+import Services from '../components/Services';
+import Contact from '../components/Contact';
+import Navbar from '../components/Navbar';
+import Login from '../components/Login';
 
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/about" component={About} />
           <Route path="/services" component={Services} />
           <Route path="/contact" component={Contact} />
+          <Route path="/login" component={Login} />
         </Switch>
       </div>
     );
