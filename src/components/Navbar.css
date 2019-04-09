@@ -1,0 +1,11 @@
+#navBar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.link {
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
