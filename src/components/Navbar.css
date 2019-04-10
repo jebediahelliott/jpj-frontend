@@ -1,6 +1,13 @@
+@font-face {
+  font-family: DoulosSILW;
+  src: url(./fonts/DoulosSIL-R.woff);
+}
+
 #navBar {
   display: flex;
   justify-content: flex-end;
+  background: #840E05;
+  border-bottom: 5px solid #F1CD4E;
 }
 
 .link {
@@ -8,4 +15,5 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-family: DoulosSILW, sans-serif;
 }
