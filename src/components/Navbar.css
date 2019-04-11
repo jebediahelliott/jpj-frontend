@@ -8,12 +8,14 @@
   justify-content: flex-end;
   background: #840E05;
   border-bottom: 5px solid #F1CD4E;
+  border-top: 5px solid #F1CD4E;
 }
 
 .link {
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   text-decoration: none;
   font-family: DoulosSILW, sans-serif;
   /* border-right: 2px solid #F1CD4E; */
@@ -24,4 +26,12 @@
   content: '|';
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.logo {
+  border-radius: 50%;
+  margin-left: 5px;
+  /* width: 13%; */
+  border: 5px solid #F1CD4E;
+  margin-right: auto;
 }
