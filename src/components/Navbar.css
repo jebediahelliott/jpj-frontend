@@ -4,12 +4,13 @@
 }
 
 #navBar {
-  margin: 60px 0;
+  margin: 58.7px 0;
   display: flex;
   justify-content: flex-end;
-  background: #840E05;
   border-bottom: 5px solid #F1CD4E;
   border-top: 5px solid #F1CD4E;
+  background: rgb(132,14,5);
+  background: radial-gradient(circle, rgba(132,14,5,1) 0%, rgba(189,34,34,0.9598214285714286) 53%, rgba(200,19,6,1) 100%);
 }
 
 .link {
