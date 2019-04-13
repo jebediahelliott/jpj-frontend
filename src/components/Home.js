@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import ReactMarkdown from 'react-markdown'
 
 class Home extends Component {
+
+  // parseMarkdown = () => {
+  //   var md = require('markdown-it')();
+  //   return result
+  // }
 
   render() {
     return(
       <div>
         <h1>{this.props.content.Title}</h1>
-        <p>{this.props.content.Content}</p>
+        <ReactMarkdown source={this.props.content.Content} />
       </div>
     )
   }
@@ -14,3 +20,6 @@ class Home extends Component {
 }
 
 export default Home;
+
+
+// {this.props.content.Content}
