@@ -10,16 +10,29 @@ import Login from '../components/Login';
 
 
 class App extends Component {
-  testInfo = () => {
+  constructor(props) {
+    super(props)
+    this.state = {
+      home: {},
+      services: {},
+      about: {}
+    }
+  }
+  fetchPages = () => {
     fetch('http://localhost:1337/infopages')
     .then(res => res.json())
     .then(res => {
       console.log(res);
+      this.setState({
+        home: res[0],
+        services: res[1],
+        about: res[2]
+      })
     })
   }
 
   componentDidMount() {
-    this.testInfo()
+    this.fetchPages()
   }
 
   render() {
@@ -28,9 +41,9 @@ class App extends Component {
         <BrowserRouter>
           <Navbar />
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/services" component={Services} />
+            <Route exact path="/" render={routerProps => <Home {...routerProps} content={this.state.home} />} />
+            <Route path="/about" render={routerProps => <About {...routerProps} content={this.state.about} />} />
+            <Route path="/services" render={routerProps => <Services {...routerProps} content={this.state.services} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
           </Switch>
