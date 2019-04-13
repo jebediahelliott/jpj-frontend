@@ -21,7 +21,6 @@
   text-decoration: none;
   font-family: DoulosSILW, sans-serif;
   align-self: center;
-  /* border-right: 2px solid #F1CD4E; */
 }
 
 .link:after {
@@ -33,7 +32,6 @@
 
 .link:last-child::after {
   content: '';
-  /* border-right: none; */
 }
 
 .logo {

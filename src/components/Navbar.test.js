@@ -7,6 +7,6 @@ describe('<Navbar />', () => {
   it('Has a link for each page and a log in link', () => {
     const wrapper = shallow(<Navbar />);
       // console.log(wrapper.find('Navbar').render().debug());
-    expect(wrapper.find('Link').length).toEqual(5);
+    expect(wrapper.find('NavLink').length).toEqual(5);
   })
 })
