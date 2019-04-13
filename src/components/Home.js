@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown'
+import './Layout.css'
 
 class Home extends Component {
 
@@ -10,9 +11,9 @@ class Home extends Component {
 
   render() {
     return(
-      <div>
-        <h1>{this.props.content.Title}</h1>
-        <ReactMarkdown source={this.props.content.Content} />
+      <div className='staticPage'>
+        <h1>{this.props.page.Title}</h1>
+        <ReactMarkdown source={this.props.page.Content} />
       </div>
     )
   }

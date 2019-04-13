@@ -41,9 +41,9 @@ class App extends Component {
         <BrowserRouter>
           <Navbar />
           <Switch>
-            <Route exact path="/" render={routerProps => <Home {...routerProps} content={this.state.home} />} />
-            <Route path="/about" render={routerProps => <About {...routerProps} content={this.state.about} />} />
-            <Route path="/services" render={routerProps => <Services {...routerProps} content={this.state.services} />} />
+            <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
+            <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
+            <Route path="/services" render={routerProps => <Services {...routerProps} page={this.state.services} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
           </Switch>
