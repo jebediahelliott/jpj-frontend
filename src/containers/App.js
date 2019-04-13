@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../components/Home';
 import About from '../components/About';
 import Services from '../components/Services';
@@ -17,17 +17,24 @@ class App extends Component {
       console.log(res);
     })
   }
+
+  componentDidMount() {
+    this.testInfo()
+  }
+
   render() {
     return (
       <div className="App">
-        <Navbar />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/services" component={Services} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/login" component={Login} />
-        </Switch>
+        <BrowserRouter>
+          <Navbar />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/services" component={Services} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/login" component={Login} />
+          </Switch>
+        </BrowserRouter>
       </div>
     );
   }
