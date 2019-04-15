@@ -1,5 +1,11 @@
+@font-face {
+  font-family: DoulosSILW;
+  src: url(./fonts/DoulosSIL-R.woff);
+}
+
 .staticPage {
   /* text-align: center; */
   width: 60%;
   margin: 0 auto;
+  font: small-caps 1.5em DoulosSILW;
 }
