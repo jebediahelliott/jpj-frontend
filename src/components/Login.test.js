@@ -9,7 +9,7 @@ describe('<Login />', () => {
   })
   it('Has a form with email and password', () => {
     const wrapper = shallow(<Login />);
-    expect(wrapper.find('Form').text()).toEqual(expect.stringMatching('Email'))
+    expect(wrapper.find('Form').text()).toEqual(expect.stringMatching('Email Address'))
     expect(wrapper.find('Form').text()).toEqual(expect.stringMatching('Password'))
   })
 })
