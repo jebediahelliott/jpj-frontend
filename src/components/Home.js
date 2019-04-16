@@ -7,8 +7,6 @@ class Home extends Component {
 
 
   render() {
-    console.log(this.props.page.Content);
-
     return(
       <div className='staticPage'>
         <h1>{this.props.page.Title}</h1>

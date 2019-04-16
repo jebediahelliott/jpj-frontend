@@ -7,6 +7,7 @@ import Services from '../components/Services';
 import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 import Login from '../components/Login';
+import Footer from '../components/Footer';
 
 
 class App extends Component {
@@ -47,6 +48,7 @@ class App extends Component {
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
           </Switch>
+          <Footer />
         </BrowserRouter>
       </div>
     );
