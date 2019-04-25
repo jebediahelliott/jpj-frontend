@@ -10,7 +10,7 @@ class Footer extends Component {
         <div className="footer-content">
           <span>&copy; John P. Jones Canine Training</span>
           <span>814-769-1883</span>
-          <span>eichenhalle@aol.com</span>
+          <span><a href="mailto:eichenhalle@aol.com">eichenhalle@aol.com</a></span>
           <a id="faceLink" href="https://www.facebook.com/John-P-Jones-Canine-Training-270551002841/">Facebook</a>
         </div>
       </div>
