@@ -23,6 +23,11 @@
   align-self: center;
 }
 
+.link:hover {
+  text-decoration: none;
+  color: #F1CD4E;
+}
+
 .banner {
   background-image: url('./images/logo.jpg');
   height: 10em;
