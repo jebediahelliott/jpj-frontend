@@ -10,8 +10,13 @@
 .footer-content {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 60%;
   margin: auto;
   padding: 1em 0;
   font: small-caps 1.5em DoulosSILW;
+}
+
+.footer-content a {
+  color: black;
 }
