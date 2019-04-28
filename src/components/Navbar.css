@@ -4,10 +4,10 @@
 }
 
 #navBar {
-  margin: 58.7px 0;
   margin-top: 0;
+  margin-bottom: 2em;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-evenly;
   border-bottom: 5px solid #F1CD4E;
   border-top: 5px solid #F1CD4E;
   background: rgb(132,14,5);
@@ -16,23 +16,11 @@
 
 .link {
   color: black;
-  font-size: 35px;
   text-align: center;
-  padding: 15px 0;
-  text-decoration: none;
-  font: small-caps 2em DoulosSILW;
+  padding: 0.25em 0;
+  /* text-decoration: none; */
+  font: small-caps 1.5em DoulosSILW;
   align-self: center;
-}
-
-.link:after {
-  color: #F1CD4E;
-  content: '|';
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.link:last-child::after {
-  content: '';
 }
 
 .banner {
@@ -42,13 +30,3 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
-
-/* .logo {
-  position: absolute;
-  top: 1%;
-  z-index: 1;
-  border-radius: 50%;
-  margin-left: 1%;
-  height: 200px;
-  border: 5px solid #F1CD4E;
-} */
