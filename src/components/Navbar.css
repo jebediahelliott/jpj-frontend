@@ -5,6 +5,7 @@
 
 #navBar {
   margin: 58.7px 0;
+  margin-top: 0;
   display: flex;
   justify-content: flex-end;
   border-bottom: 5px solid #F1CD4E;
@@ -34,7 +35,15 @@
   content: '';
 }
 
-.logo {
+.banner {
+  background-image: url('./images/logo.jpg');
+  height: 10em;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* .logo {
   position: absolute;
   top: 1%;
   z-index: 1;
@@ -42,4 +51,4 @@
   margin-left: 1%;
   height: 200px;
   border: 5px solid #F1CD4E;
-}
+} */

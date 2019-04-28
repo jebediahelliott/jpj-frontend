@@ -8,7 +8,9 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        <img src={ logo } alt="Logo" className="logo" />
+        <div className="banner">
+
+        </div>
         <div id="navBar">
           <NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink>
           <NavLink to="/about" className="link" activeStyle={{color: '#F1CD4E'}} exact>About</NavLink>
