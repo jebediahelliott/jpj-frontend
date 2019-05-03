@@ -64,7 +64,7 @@ class App extends Component {
             <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
             <Route path="/services" render={routerProps => <Services {...routerProps} page={this.state.services} />} />
             <Route path="/contact" component={Contact} />
-            <Route path="/login" component={Login} />
+            <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
           </Switch>
           <Footer />
         </BrowserRouter>
