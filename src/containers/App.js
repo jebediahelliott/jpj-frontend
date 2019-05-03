@@ -8,6 +8,7 @@ import Contact from '../components/Contact';
 import Navbar from '../components/Navbar';
 import Login from '../components/Login';
 import Footer from '../components/Footer';
+import axios from 'axios'
 
 
 class App extends Component {
@@ -20,20 +21,37 @@ class App extends Component {
     }
   }
   fetchPages = () => {
-    fetch('http://localhost:1337/infopages')
-    .then(res => res.json())
+    axios.get('http://localhost:1337/infopages')
     .then(res => {
-      console.log(res);
       this.setState({
-        home: res[0],
-        services: res[1],
-        about: res[2]
+        home: res.data[0],
+        services: res.data[1],
+        about: res.data[2]
       })
+    })
+    .catch(error => {
+      console.log('An error occurred:', error);
     })
   }
 
   componentDidMount() {
     this.fetchPages()
+  }
+
+  handleLogin = () => {
+    axios.post('http://localhost:1337/auth/local', {
+      identifier: 'test@email.com',
+      password: 'Ragnar99!'
+    })
+    .then(response => {
+      // Handle success.
+      console.log('Well done!');
+      console.log('User profile', response);
+    })
+    .catch(error => {
+      // Handle error.
+      console.log('An error occurred:', error);
+    });
   }
 
   render() {
