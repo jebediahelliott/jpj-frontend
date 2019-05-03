@@ -21,7 +21,8 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-
+    this.props.handleLogin(this.state)
+    this.props.history.push('/profile')
   }
 
 

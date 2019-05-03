@@ -17,7 +17,9 @@ class App extends Component {
     this.state = {
       home: {},
       services: {},
-      about: {}
+      about: {},
+      token: '',
+      user: ''
     }
   }
   fetchPages = () => {
@@ -38,15 +40,28 @@ class App extends Component {
     this.fetchPages()
   }
 
-  handleLogin = () => {
+  handleLogin = ({email, password}) => {
     axios.post('http://localhost:1337/auth/local', {
-      identifier: 'test@email.com',
-      password: 'Ragnar99!'
+      identifier: `${email}`,
+      password: `${password}`
     })
     .then(response => {
       // Handle success.
+      this.setState({
+        token: response.data.jwt,
+        user: response.data.user
+      })
       console.log('Well done!');
       console.log('User profile', response);
+      axios.get(`http://localhost:1337/dogs/2`, {
+        headers: {
+          Authorization: `Bearer ${response.data.jwt}`
+        }
+      })
+      .then(response => {
+        console.log(response);
+      })
+
     })
     .catch(error => {
       // Handle error.
