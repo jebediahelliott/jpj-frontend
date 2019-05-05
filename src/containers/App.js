@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from '../components/Home/Home';
 import About from '../components/About/About';
-import Services from '../components/Services/Services';
+import TrainingPrograms from '../components/TrainingPrograms/TrainingPrograms';
 import Contact from '../components/Contact/Contact';
 import Navbar from '../components/Navbar/Navbar';
 import Login from '../components/Login/Login';
@@ -80,7 +80,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
-            <Route path="/services" render={routerProps => <Services {...routerProps} page={this.state.services} />} />
+            <Route path="/services" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.services} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
           </Switch>
