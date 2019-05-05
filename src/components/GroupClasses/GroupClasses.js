@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactMarkdown from 'react-markdown'
-import './Layout.css';
+import '../Layout.css';
 
 class GroupClasses extends Component {
 

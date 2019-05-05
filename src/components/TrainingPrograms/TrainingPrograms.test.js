@@ -5,7 +5,7 @@ import TrainingPrograms from './TrainingPrograms';
 describe('<TrainingPrograms />', () => {
   const props = {
     Title: 'TrainingPrograms',
-    Content: 'This is the services content'
+    Content: 'This is the TrainingPrograms content'
   }
   it('Renders a title', () => {
     const wrapper = mount(<TrainingPrograms page={props} />);

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import ReactMarkdown from 'react-markdown';
-import './Layout.css';
+import ReactMarkdown from 'react-markdown'
+import '../Layout.css';
 
-
-class Services extends Component {
+class GraduateProgram extends Component {
 
 
 
@@ -18,4 +17,4 @@ class Services extends Component {
 
 }
 
-export default Services;
+export default GraduateProgram;

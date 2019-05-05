@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Layout.css'
+import '../Layout.css'
 import { Form, Button } from 'react-bootstrap'
 
 
