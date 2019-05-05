@@ -19,7 +19,8 @@ class App extends Component {
       services: {},
       about: {},
       token: '',
-      user: ''
+      user: {},
+      dog: {}
     }
   }
   fetchPages = () => {
@@ -47,18 +48,20 @@ class App extends Component {
     })
     .then(response => {
       // Handle success.
+      console.log(response);
       this.setState({
         token: response.data.jwt,
         user: response.data.user
       })
-      console.log('Well done!');
-      console.log('User profile', response);
-      axios.get(`http://localhost:1337/dogs/2`, {
+      axios.get(`http://localhost:1337/dogs?user.username=${response.data.user.username}`, {
         headers: {
           Authorization: `Bearer ${response.data.jwt}`
         }
       })
       .then(response => {
+        this.setState({
+          dog: response.data[0]
+        })
         console.log(response);
       })
 
