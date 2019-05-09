@@ -18,6 +18,13 @@ class App extends Component {
       home: {},
       about: {},
       trainingPrograms: {},
+      groupClasses: {},
+      graduateProgram: {},
+      tracking: {},
+      residentTraining: {},
+      consultation: {},
+      basicObedience: {},
+      puppySchool: {},
       token: null,
       user: null,
       dog: null
@@ -27,7 +34,6 @@ class App extends Component {
   fetchPages = () => {
     axios.get('http://localhost:1337/pages')
     .then(res => {
-      console.log(res);
       this.setState({
         home: res.data[0],
         about: res.data[1],
@@ -94,7 +100,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
-            <Route path="/services" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.services} />} />
+            <Route path="/training-programs" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.trainingPrograms} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
           </Switch>

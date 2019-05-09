@@ -13,7 +13,7 @@ class Navbar extends Component {
           <div id="navBar">
             <NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink>
             <NavLink to="/about" className="link" activeStyle={{color: '#F1CD4E'}} exact>About</NavLink>
-            <NavLink to="/services" className="link" activeStyle={{color: '#F1CD4E'}} exact>Services</NavLink>
+            <NavLink to="/training-programs" className="link" activeStyle={{color: '#F1CD4E'}} exact>Training Programs</NavLink>
             <NavLink to="/contact" className="link" activeStyle={{color: '#F1CD4E'}} exact>Contact</NavLink>
             <NavLink to="/" className="link" onClick={this.props.handleLogout} activeStyle={{color: '#F1CD4E'}} exact>Log Out</NavLink>
           </div>
@@ -26,7 +26,7 @@ class Navbar extends Component {
         <div id="navBar">
           <NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink>
           <NavLink to="/about" className="link" activeStyle={{color: '#F1CD4E'}} exact>About</NavLink>
-          <NavLink to="/services" className="link" activeStyle={{color: '#F1CD4E'}} exact>Services</NavLink>
+          <NavLink to="/training-programs" className="link" activeStyle={{color: '#F1CD4E'}} exact>Training Programs</NavLink>
           <NavLink to="/contact" className="link" activeStyle={{color: '#F1CD4E'}} exact>Contact</NavLink>
           <NavLink to="/login" className="link" activeStyle={{color: '#F1CD4E'}} exact>Log In</NavLink>
         </div>
