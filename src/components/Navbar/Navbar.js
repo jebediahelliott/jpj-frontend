@@ -5,7 +5,6 @@ import './Navbar.css';
 class Navbar extends Component {
 
   render() {
-    console.log(this.props)
     if (this.props.user) {
       return (
         <div>
