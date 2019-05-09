@@ -5,8 +5,7 @@ import Navbar from './Navbar';
 
 describe('<Navbar />', () => {
   it('Has a link for each page and a log in link', () => {
-    const wrapper = shallow(<Navbar />);
-      // console.log(wrapper.find('Navbar').render().debug());
+    const wrapper = shallow(<Navbar.WrappedComponent />);
     expect(wrapper.find('NavLink').length).toEqual(5);
   })
 })

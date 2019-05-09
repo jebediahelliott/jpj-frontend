@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../components/Home/Home';
 import About from '../components/About/About';
 import TrainingPrograms from '../components/TrainingPrograms/TrainingPrograms';
@@ -18,11 +18,12 @@ class App extends Component {
       home: {},
       services: {},
       about: {},
-      token: '',
-      user: {},
-      dog: {}
+      token: null,
+      user: null,
+      dog: null
     }
   }
+
   fetchPages = () => {
     axios.get('http://localhost:1337/pages')
     .then(res => {
@@ -49,7 +50,6 @@ class App extends Component {
     })
     .then(response => {
       // Handle success.
-      console.log(response);
       this.setState({
         token: response.data.jwt,
         user: response.data.user
@@ -63,9 +63,7 @@ class App extends Component {
         this.setState({
           dog: response.data[0]
         })
-        console.log(response);
       })
-
     })
     .catch(error => {
       // Handle error.
@@ -73,11 +71,19 @@ class App extends Component {
     });
   }
 
+  handleLogout = () => {
+    this.setState({
+      token: null,
+      user: null,
+      dog: null
+    })
+  }
+
   render() {
     return (
       <div className="App">
-        <BrowserRouter>
-          <Navbar />
+        <Router>
+          <Navbar user={this.state.user} />
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
@@ -86,7 +92,7 @@ class App extends Component {
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
           </Switch>
           <Footer />
-        </BrowserRouter>
+        </Router>
       </div>
     );
   }
