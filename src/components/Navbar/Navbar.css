@@ -1,6 +1,6 @@
 @font-face {
   font-family: DoulosSILW;
-  src: url(./fonts/DoulosSIL-R.woff);
+  src: url(../fonts/DoulosSIL-R.woff);
 }
 
 #navBar {
@@ -29,7 +29,7 @@
 }
 
 .banner {
-  background-image: url('./images/logo.jpg');
+  background-image: url('../images/logo.jpg');
   height: 10em;
   background-position: left;
   background-repeat: no-repeat;

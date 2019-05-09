@@ -8,6 +8,6 @@ describe('<Profile />', () => {
       username: 'Jeb'
     }
     const wrapper = shallow(<Profile user={props}/>);
-
+    expect(wrapper.find('h1').text()).toEqual(expect.stringMatching(props.username))
   })
 })
