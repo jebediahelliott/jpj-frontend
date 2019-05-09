@@ -16,8 +16,8 @@ class App extends Component {
     super(props)
     this.state = {
       home: {},
-      services: {},
       about: {},
+      trainingPrograms: {},
       token: null,
       user: null,
       dog: null
@@ -30,8 +30,15 @@ class App extends Component {
       console.log(res);
       this.setState({
         home: res.data[0],
-        services: res.data[1],
-        about: res.data[2]
+        about: res.data[1],
+        trainingPrograms: res.data[2],
+        groupClasses: res.data[3],
+        graduateProgram: res.data[4],
+        tracking: res.data[5],
+        residentTraining: res.data[6],
+        consultation: res.data[7],
+        basicObedience: res.data[8],
+        puppySchool: res.data[9]
       })
     })
     .catch(error => {
