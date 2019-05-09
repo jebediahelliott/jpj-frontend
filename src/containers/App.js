@@ -24,8 +24,9 @@ class App extends Component {
     }
   }
   fetchPages = () => {
-    axios.get('http://localhost:1337/infopages')
+    axios.get('http://localhost:1337/pages')
     .then(res => {
+      console.log(res);
       this.setState({
         home: res.data[0],
         services: res.data[1],

@@ -4,12 +4,12 @@ import Consultation from './Consultation';
 
 describe('<Consultation />', () => {
   const props = {
-    Title: 'Consultation',
-    Content: 'This is the Consultation content'
+    title: 'Consultation',
+    content: 'This is the Consultation content'
   }
   it('Renders a title', () => {
     const wrapper = mount(<Consultation page={props} />);
-    expect(wrapper.find('h1').text()).toEqual(props.Title);
-    expect(wrapper.find('p').text()).toEqual(props.Content);
+    expect(wrapper.find('h1').text()).toEqual(props.title);
+    expect(wrapper.find('p').text()).toEqual(props.content);
   })
 })

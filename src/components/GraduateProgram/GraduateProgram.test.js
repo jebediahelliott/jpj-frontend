@@ -5,11 +5,11 @@ import GraduateProgram from './GraduateProgram';
 describe('<GraduateProgram />', () => {
   it('Renders a title', () => {
     const props = {
-      Title: 'GraduateProgram',
-      Content: 'GraduateProgram page content'
+      title: 'GraduateProgram',
+      content: 'GraduateProgram page content'
     }
     const wrapper = mount(<GraduateProgram page={props} />);
-    expect(wrapper.find('h1').text()).toEqual(props.Title);
-    expect(wrapper.find('p').text()).toEqual(props.Content);
+    expect(wrapper.find('h1').text()).toEqual(props.title);
+    expect(wrapper.find('p').text()).toEqual(props.content);
   })
 })

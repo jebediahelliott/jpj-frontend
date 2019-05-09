@@ -9,9 +9,9 @@
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 60%;
+  width: 100%;
   margin: auto;
   padding: 1em 0;
   font: small-caps 1.5em DoulosSILW;
