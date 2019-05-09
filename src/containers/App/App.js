@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Home from '../components/Home/Home';
-import About from '../components/About/About';
-import TrainingPrograms from '../components/TrainingPrograms/TrainingPrograms';
-import Contact from '../components/Contact/Contact';
-import Navbar from '../components/Navbar/Navbar';
-import Login from '../components/Login/Login';
-import Footer from '../components/Footer/Footer';
+import Home from '../../components/Home/Home';
+import About from '../../components/About/About';
+import TrainingPrograms from '../../components/TrainingPrograms/TrainingPrograms';
+import Contact from '../../components/Contact/Contact';
+import Navbar from '../../components/Navbar/Navbar';
+import Login from '../../components/Login/Login';
+import Footer from '../../components/Footer/Footer';
 import axios from 'axios'
 
 
