@@ -8,6 +8,13 @@ import Contact from '../../components/Contact/Contact';
 import Navbar from '../../components/Navbar/Navbar';
 import Login from '../../components/Login/Login';
 import Footer from '../../components/Footer/Footer';
+import BasicProgram from '../../components/BasicProgram/BasicProgram';
+import Consultation from '../../components/Consultation/Consultation';
+import GraduateProgram from '../../components/GraduateProgram/GraduateProgram';
+import GroupClasses from '../../components/GroupClasses/GroupClasses';
+import PuppySchool from '../../components/PuppySchool/PuppySchool';
+import ResidentTraining from '../../components/ResidentTraining/ResidentTraining';
+import Tracking from '../../components/Tracking/Tracking';
 import axios from 'axios'
 
 
@@ -23,7 +30,7 @@ class App extends Component {
       tracking: {},
       residentTraining: {},
       consultation: {},
-      basicObedience: {},
+      basicProgram: {},
       puppySchool: {},
       token: null,
       user: null,
@@ -43,7 +50,7 @@ class App extends Component {
         tracking: res.data[5],
         residentTraining: res.data[6],
         consultation: res.data[7],
-        basicObedience: res.data[8],
+        basicProgram: res.data[8],
         puppySchool: res.data[9]
       })
     })
@@ -103,6 +110,13 @@ class App extends Component {
             <Route path="/training-programs" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.trainingPrograms} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
+            <Route path="/consultation" render={routerProps => <Consultation {...routerProps} page={this.state.consultation} />} />
+            <Route path="/puppy-school" render={routerProps => <PuppySchool {...routerProps} page={this.state.puppySchool} />} />
+            <Route path="/basic-program" render={routerProps => <BasicProgram {...routerProps} page={this.state.basicProgram} />} />
+            <Route path="/group-classes" render={routerProps => <GroupClasses {...routerProps} page={this.state.groupClasses} />} />
+            <Route path="/graduate-program" render={routerProps => <GraduateProgram {...routerProps} page={this.state.graduateProgram} />} />
+            <Route path="/resident-training" render={routerProps => <ResidentTraining {...routerProps} page={this.state.residentTraining} />} />
+            <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
           </Switch>
           <Footer />
         </Router>
