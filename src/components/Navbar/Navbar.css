@@ -60,17 +60,20 @@ ul li {
   padding: 0 .5em;
 }
 
+.dropdown .link {
+  color: rgb(178,56,49);
+}
+
 li:last-child {
   border-bottom: none;
 }
 
 .dropdown .link:hover {
-  color: rgb(132,14,5);
+  color: black;
 }
 
 #droplink:hover > .dropdown {
   display: block;
   flex-direction: column;
   text-align: center;
-  padding: 0 0.25em;
 }
