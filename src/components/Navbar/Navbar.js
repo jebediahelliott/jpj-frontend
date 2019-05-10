@@ -26,7 +26,7 @@ class Navbar extends Component {
               </li>
               <li><NavLink to="/contact" className="link" activeStyle={{color: '#F1CD4E'}} exact>Contact</NavLink></li>
               <li><NavLink to="/profile" className="link" activeStyle={{color: '#F1CD4E'}} exact>Profile</NavLink></li>
-              <li><NavLink to="/login" className="link" activeStyle={{color: '#F1CD4E'}} exact>Log Out</NavLink></li>
+              <li><NavLink to="/login" className="link" onClick={this.props.handleLogout} activeStyle={{color: '#F1CD4E'}} exact>Log Out</NavLink></li>
             </ul>
           </nav>
         </div>

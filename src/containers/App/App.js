@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import Home from '../../components/Home/Home';
 import About from '../../components/About/About';
 import TrainingPrograms from '../../components/TrainingPrograms/TrainingPrograms';
@@ -15,6 +15,7 @@ import GroupClasses from '../../components/GroupClasses/GroupClasses';
 import PuppySchool from '../../components/PuppySchool/PuppySchool';
 import ResidentTraining from '../../components/ResidentTraining/ResidentTraining';
 import Tracking from '../../components/Tracking/Tracking';
+import Profile from '../../components/Profile/Profile';
 import axios from 'axios'
 
 
@@ -32,9 +33,9 @@ class App extends Component {
       consultation: {},
       basicProgram: {},
       puppySchool: {},
-      token: null,
-      user: null,
-      dog: null
+      token: undefined,
+      user: undefined,
+      dog: undefined
     }
   }
 
@@ -103,7 +104,7 @@ class App extends Component {
     return (
       <div className="App">
         <Router>
-          <Navbar user={this.state.user} />
+          <Navbar user={this.state.user} handleLogout={this.handleLogout} />
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
@@ -117,6 +118,7 @@ class App extends Component {
             <Route path="/graduate-program" render={routerProps => <GraduateProgram {...routerProps} page={this.state.graduateProgram} />} />
             <Route path="/resident-training" render={routerProps => <ResidentTraining {...routerProps} page={this.state.residentTraining} />} />
             <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
+            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} user={this.state.user} /> : <Redirect to="/login" />} />
           </Switch>
           <Footer />
         </Router>
