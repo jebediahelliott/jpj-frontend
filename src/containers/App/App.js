@@ -64,25 +64,12 @@ class App extends Component {
     this.fetchPages()
   }
 
-  handleLogin = (response) => {
+  handleLogin = (response, dogResponse) => {
       this.setState({
         token: response.data.jwt,
-        user: response.data.user
+        user: response.data.user,
+        dog: dogResponse.data[0]
       })
-      axios.get(`http://localhost:1337/dogs?user.username=${response.data.user.username}`, {
-        headers: {
-          Authorization: `Bearer ${response.data.jwt}`
-        }
-      })
-      .then(response => {
-        this.setState({
-          dog: response.data[0]
-        })
-      })
-      .catch(error => {
-        // Handle error.
-        console.log('An error occurred:', error);
-      });
     }
 
   handleLogout = () => {
@@ -111,7 +98,7 @@ class App extends Component {
             <Route path="/graduate-program" render={routerProps => <GraduateProgram {...routerProps} page={this.state.graduateProgram} />} />
             <Route path="/resident-training" render={routerProps => <ResidentTraining {...routerProps} page={this.state.residentTraining} />} />
             <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
-            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} user={this.state.user} /> : <Redirect to="/login" />} />
+            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dog={this.state.dog} user={this.state.user} /> : <Redirect to="/login" />} />
           </Switch>
           <Footer />
         </Router>

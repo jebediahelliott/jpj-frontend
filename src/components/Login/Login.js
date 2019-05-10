@@ -28,10 +28,17 @@ class Login extends Component {
       password: `${this.state.password}`
     })
     .then(response => {
-      this.props.handleLogin(response)
-    })
-    .then(res => {
-      this.props.history.push('/profile')
+      axios.get(`http://localhost:1337/dogs?user.username=${response.data.user.username}`, {
+        headers: {
+          Authorization: `Bearer ${response.data.jwt}`
+        }
+      })
+      .then(dogResponse => {
+        this.props.handleLogin(response, dogResponse)
+      })
+      .then(res => {
+        this.props.history.push('/profile')
+      })
     })
     .catch(error => {
       // Handle error.
