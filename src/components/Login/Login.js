@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../Layout.css'
 import { Form, Button } from 'react-bootstrap'
+import axios from 'axios'
+
 
 
 class Login extends Component {
@@ -8,7 +10,7 @@ class Login extends Component {
     super()
     this.state = {
       email: '',
-      password: ''
+      password: '',
     }
   }
 
@@ -21,8 +23,25 @@ class Login extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.handleLogin(this.state)
-    this.props.history.push('/profile')
+    axios.post('http://localhost:1337/auth/local', {
+      identifier: `${this.state.email}`,
+      password: `${this.state.password}`
+    })
+    .then(response => {
+      this.props.handleLogin(response)
+    })
+    .then(res => {
+      this.props.history.push('/profile')
+    })
+    .catch(error => {
+      // Handle error.
+      console.log('An error occurred:', error);
+    });
+
+    this.setState({
+      email: '',
+      password: ''
+    })
   }
 
 

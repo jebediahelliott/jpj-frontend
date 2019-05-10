@@ -64,13 +64,7 @@ class App extends Component {
     this.fetchPages()
   }
 
-  handleLogin = ({email, password}) => {
-    axios.post('http://localhost:1337/auth/local', {
-      identifier: `${email}`,
-      password: `${password}`
-    })
-    .then(response => {
-      // Handle success.
+  handleLogin = (response) => {
       this.setState({
         token: response.data.jwt,
         user: response.data.user
@@ -85,12 +79,11 @@ class App extends Component {
           dog: response.data[0]
         })
       })
-    })
-    .catch(error => {
-      // Handle error.
-      console.log('An error occurred:', error);
-    });
-  }
+      .catch(error => {
+        // Handle error.
+        console.log('An error occurred:', error);
+      });
+    }
 
   handleLogout = () => {
     this.setState({
@@ -127,4 +120,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default (App);
