@@ -14,7 +14,7 @@
 
 .link {
   color: black;
-  padding: 0.25em 0;
+  padding: 0.25em 0.5em;
   font: small-caps 1.5em DoulosSILW;
   align-self: center;
 }
@@ -25,9 +25,9 @@
 }
 
 .banner {
-  background-image: url('../images/logo.jpg');
+  background-image: url('../images/JPJtext2.jpeg');
   height: 10em;
-  background-position: left;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -73,7 +73,7 @@ li:last-child {
 }
 
 #droplink:hover > .dropdown {
-  display: block;
+  display: flex;
   flex-direction: column;
   text-align: center;
 }
