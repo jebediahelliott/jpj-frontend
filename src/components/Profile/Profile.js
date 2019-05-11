@@ -10,7 +10,7 @@ class Profile extends Component {
     return (
       <div className="staticPage">
         <h1>Welcome {this.props.user.username}</h1>
-        <Dog dog={this.props.dog} />
+        <Dog dogs={this.props.dogs} />
       </div>
     )
   }

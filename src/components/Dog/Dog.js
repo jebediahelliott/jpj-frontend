@@ -1,18 +1,25 @@
 import React, { Component } from 'react'
 import '../Layout.css';
 
-class Profile extends Component {
+class Dog extends Component {
 
 
   render() {
-    return (
-      <div>
-        <h1>{this.props.dog.name}</h1>
-        <p>{this.props.dog.notes}</p>
-      </div>
-    )
+    let source = 'http://localhost:1337'
+    if (this.props.dogs) {
+      source += this.props.dogs[0].picture[0].url
+      return (
+        <div>
+          <h1>{this.props.dogs[0].name}</h1>
+          <img src={source} alt={`picture of ${this.props.dogs[0].name}`} />
+          <p>{this.props.dogs[0].notes}</p>
+        </div>
+      )
+    }else {
+      return null
+    }
   }
 
 }
 
-export default Profile;
+export default Dog;

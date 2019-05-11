@@ -35,7 +35,7 @@ class App extends Component {
       puppySchool: {},
       token: undefined,
       user: undefined,
-      dog: undefined
+      dogs: undefined
     }
   }
 
@@ -62,13 +62,19 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchPages()
+    axios.get('http://localhost:1337/dogs')
+    .then(res => {
+      this.setState({
+        dogs: res.data
+      })
+    })
   }
 
   handleLogin = (response, dogResponse) => {
       this.setState({
         token: response.data.jwt,
         user: response.data.user,
-        dog: dogResponse.data[0]
+        dog: dogResponse.data
       })
     }
 
@@ -87,7 +93,7 @@ class App extends Component {
           <Navbar user={this.state.user} handleLogout={this.handleLogout} />
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
-            <Route path="/about" render={routerProps => <About {...routerProps} page={this.state.about} />} />
+            <Route path="/about" render={routerProps => <About {...routerProps} dogs={this.state.dogs} page={this.state.about} />} />
             <Route path="/training-programs" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.trainingPrograms} />} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
@@ -98,7 +104,7 @@ class App extends Component {
             <Route path="/graduate-program" render={routerProps => <GraduateProgram {...routerProps} page={this.state.graduateProgram} />} />
             <Route path="/resident-training" render={routerProps => <ResidentTraining {...routerProps} page={this.state.residentTraining} />} />
             <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
-            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dog={this.state.dog} user={this.state.user} /> : <Redirect to="/login" />} />
+            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dogs={this.state.dogs} user={this.state.user} /> : <Redirect to="/login" />} />
           </Switch>
           <Footer />
         </Router>
