@@ -3,8 +3,13 @@
   src: url(./fonts/DoulosSIL-R.woff);
 }
 
+body {
+  background: #d3d3d3;
+}
+
 .staticPage {
   /* text-align: center; */
+  background: white;
   flex: 1;
   width: 60%;
   margin: 0 auto;

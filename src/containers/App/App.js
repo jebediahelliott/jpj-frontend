@@ -91,6 +91,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Navbar user={this.state.user} handleLogout={this.handleLogout} />
+          <div class="main">
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} dogs={this.state.dogs} page={this.state.about} />} />
@@ -106,6 +107,7 @@ class App extends Component {
             <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
             <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dogs={this.state.dogs} user={this.state.user} /> : <Redirect to="/login" />} />
           </Switch>
+          </div>
           <Footer />
         </Router>
       </div>
