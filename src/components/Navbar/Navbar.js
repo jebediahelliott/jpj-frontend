@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './Navbar.css';
+import img1 from '../images/IMG_0386.jpg';
+import img2 from '../images/IMG_0405.jpg';
+import img3 from '../images/IMG_0408.jpg';
+import img4 from '../images/IMG_0440.jpg';
+import bannerLogo from '../images/JPJtext2.jpeg'
 
 class Navbar extends Component {
 
@@ -8,7 +13,13 @@ class Navbar extends Component {
     if (this.props.user) {
       return (
         <div>
-          <div className="banner"></div>
+          <div className="banner">
+            <img src={img1} alt="asdf" />
+            <img src={img2} />
+            <img id ="logo" src={bannerLogo} />
+            <img src={img3} />
+            <img src={img4} />
+          </div>
           <nav id="navBar">
             <ul className="menu">
               <li><NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink></li>
@@ -34,7 +45,14 @@ class Navbar extends Component {
     }
     return (
       <div>
-        <div className="banner"></div>
+        <div className="banner">
+          <div id="banner-image1"></div>
+          <div id="banner-image2"></div>
+          <div id="banner-logo"></div>
+          <div id="banner-image3"></div>
+          <div id="banner-image4"></div>
+          <div id="banner-image5"></div>
+        </div>
         <nav id="navBar">
           <ul className="menu">
             <li><NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink></li>
@@ -61,3 +79,8 @@ class Navbar extends Component {
 }
 
 export default withRouter(Navbar);
+// <img src={img1} alt="asdf" />
+// <img src={img2} />
+// <img id ="logo" src={bannerLogo} />
+// <img src={img3} />
+// <img src={img4} />

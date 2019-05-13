@@ -91,7 +91,7 @@ class App extends Component {
       <div className="App">
         <Router>
           <Navbar user={this.state.user} handleLogout={this.handleLogout} />
-          <div class="main">
+          <div className="main">
           <Switch>
             <Route exact path="/" render={routerProps => <Home {...routerProps} page={this.state.home} />} />
             <Route path="/about" render={routerProps => <About {...routerProps} dogs={this.state.dogs} page={this.state.about} />} />

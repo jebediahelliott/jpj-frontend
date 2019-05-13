@@ -11,7 +11,7 @@ class Dog extends Component {
       return (
         <div>
           <h1>{this.props.dogs[0].name}</h1>
-          <img src={source} alt={`picture of ${this.props.dogs[0].name}`} />
+          <img src={source} alt={this.props.dogs[0].name} />
           <p>{this.props.dogs[0].notes}</p>
         </div>
       )
