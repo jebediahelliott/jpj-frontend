@@ -14,11 +14,12 @@ class Navbar extends Component {
       return (
         <div>
           <div className="banner">
-            <img src={img1} alt="asdf" />
-            <img src={img2} />
-            <img id ="logo" src={bannerLogo} />
-            <img src={img3} />
-            <img src={img4} />
+          <div id="banner-image1"></div>
+          <div id="banner-image2"></div>
+          <div id="banner-logo"></div>
+          <div id="banner-image3"></div>
+          <div id="banner-image4"></div>
+          <div id="banner-image5"></div>
           </div>
           <nav id="navBar">
             <ul className="menu">
