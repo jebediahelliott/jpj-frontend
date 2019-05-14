@@ -74,7 +74,7 @@ class App extends Component {
       this.setState({
         token: response.data.jwt,
         user: response.data.user,
-        dog: dogResponse.data
+        dog: dogResponse
       })
     }
 
