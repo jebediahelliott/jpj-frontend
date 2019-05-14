@@ -3,8 +3,8 @@ import { shallow } from 'enzyme';
 import App from './App';
 
 describe('<App />', () => {
-  it('should render a <div />', () => {
+  it('renders a container for the App', () => {
     const wrapper = shallow(<App />)
-    expect(wrapper.find('div').length).toEqual(1)
+    expect(wrapper.find('.App').length).toEqual(1)
   })
 })
