@@ -4,7 +4,7 @@
 }
 
 #navBar {
-  margin-top: 0;
+  margin: 0;
   border-bottom: 5px solid #F1CD4E;
   border-top: 5px solid #F1CD4E;
   background: rgb(132,14,5);
@@ -13,9 +13,9 @@
 
 .link {
   color: black;
-  padding: 0.25em 0.5em;
+  padding: 0.25em 0;
   font: small-caps 1.5em DoulosSILW;
-  align-self: center;
+  /* align-self: center; */
 }
 
 .link:hover {

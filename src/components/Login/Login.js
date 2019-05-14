@@ -28,18 +28,10 @@ class Login extends Component {
       password: `${this.state.password}`
     })
     .then(response => {
-      // Make second request because authorization response does not include associated objects
-      axios.get('http://localhost:1337/users/me', {
-        headers: {
-          Authorization: `Bearer ${response.data.jwt}`
-        }
-      })
-      .then(dogResponse => {
-        this.props.handleLogin(response, dogResponse.data.dogs)
-      })
-      .then(res => {
-        this.props.history.push('/profile')
-      })
+      this.props.handleLogin(response)
+    })
+    .then(res => {
+      this.props.history.push('/profile')
     })
     .catch(error => {
       // Handle error.

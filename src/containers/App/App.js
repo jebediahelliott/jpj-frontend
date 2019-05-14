@@ -70,11 +70,11 @@ class App extends Component {
     })
   }
 
-  handleLogin = (response, dogResponse) => {
+  handleLogin = (response) => {
       this.setState({
         token: response.data.jwt,
         user: response.data.user,
-        dog: dogResponse
+        dogs: response.data.user.dogs
       })
     }
 
