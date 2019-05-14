@@ -10,7 +10,6 @@ body {
 .staticPage {
   /* text-align: center; */
   background: white;
-  flex: 1;
   width: 60%;
   margin: 0 auto;
   font: small-caps 2em/1.25em DoulosSILW;

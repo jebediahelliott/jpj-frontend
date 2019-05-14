@@ -5,6 +5,7 @@
 }
 
 .main {
+  flex: 1;
   background: white;
   width: 60%;
   margin: auto;
