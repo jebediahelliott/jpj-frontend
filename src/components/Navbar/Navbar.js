@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './Navbar.css';
-import img1 from '../images/IMG_0386.jpg';
-import img2 from '../images/IMG_0405.jpg';
-import img3 from '../images/IMG_0408.jpg';
-import img4 from '../images/IMG_0440.jpg';
-import bannerLogo from '../images/JPJtext2.jpeg'
 
 class Navbar extends Component {
 

@@ -62,12 +62,6 @@ class App extends Component {
 
   componentDidMount() {
     this.fetchPages()
-    axios.get('http://localhost:1337/dogs')
-    .then(res => {
-      this.setState({
-        dogs: res.data
-      })
-    })
   }
 
   handleLogin = (response) => {
