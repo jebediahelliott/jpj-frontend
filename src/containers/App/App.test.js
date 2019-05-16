@@ -17,7 +17,14 @@ describe('<App />', () => {
     expect(spy).toBeCalled();
   })
   describe('fetchPages', () => {
-    it('makes a GET request', async () => {
+    it('makes a GET request', () => {
+      const wrapper = shallow(<App />);
+      const instance = wrapper.instance()
+      const spy = jest.spyOn(axios, 'get');
+      instance.componentDidMount();
+      expect(spy).toHaveBeenCalled();
+    })
+    it('sets the state', async () => {
       const pages = [
         {
           title: 'About',
@@ -34,7 +41,6 @@ describe('<App />', () => {
       const getMock = jest.spyOn(axios, 'get');
       getMock.mockResolvedValue(resp)
       await instance.componentDidMount();
-      expect(getMock).toHaveBeenCalled();
       expect(wrapper.state()).toEqual(
         {
           home: { title: 'About', content: 'About content' },
@@ -52,7 +58,6 @@ describe('<App />', () => {
           dogs: undefined
         }
       )
-      // expect(spy).toBeCalled();
     })
   })
 })
