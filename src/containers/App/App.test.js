@@ -8,6 +8,14 @@ describe('<App />', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('.App').length).toEqual(1);
   })
+  it('renders <Navbar />', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.contains('Navbar'));
+  })
+  it('renders <Footer />', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.contains('Footer'));
+  })
   it('has a route for each page', () => {
     const wrapper = shallow(<App />);
     let routes = [
