@@ -8,6 +8,28 @@ describe('<App />', () => {
     const wrapper = shallow(<App />);
     expect(wrapper.find('.App').length).toEqual(1);
   })
+  it('has a route for each page', () => {
+    const wrapper = shallow(<App />);
+    let routes = [
+      "/",
+      "/about",
+      "/training-programs",
+      "/contact",
+      "/login",
+      "/consultation",
+      "/puppy-school",
+      "/basic-program",
+      "/group-classes",
+      "/graduate-program",
+      "/resident-training",
+      "/tracking",
+      "/profile"
+    ]
+    wrapper.find('Route').forEach(route => {
+      expect(routes).toContain(route.props().path)
+      routes = routes.filter(r => r !== route.props().path)
+    })
+  })
   it('calls fetchPages when it mounts', () => {
     const wrapper = shallow(<App />);
     const instance = wrapper.instance()
