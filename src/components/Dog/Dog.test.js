@@ -17,7 +17,7 @@ describe('<Dog />', () => {
       }
     ]
     const wrapper = shallow(<Dog dogs={props}/>);
-    expect(wrapper.find('h1').text()).toEqual(`${props[0].name}`);
+    expect(wrapper.find('h2').text()).toEqual(`${props[0].name}`);
     expect(wrapper.find('p').text()).toEqual(props[0].notes);
   })
 })
