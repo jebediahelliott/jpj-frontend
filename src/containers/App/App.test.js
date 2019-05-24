@@ -56,14 +56,16 @@ describe('<App />', () => {
     })
     it('sets the state', async () => {
       const pages = [
-        {
-          title: 'About',
-          content: 'About content'
-        },
-        {
-          title: 'Training Programs',
-          content: 'Training content'
-        }
+        { title: 'Home', content: 'Home content' },
+        { title: 'About', content: 'About content'},
+        { title: 'Training Programs', content: 'Training Programs content' },
+        { title: 'Group Classes', content: 'Group Classes content' },
+        { title: 'Graduate Program', content: 'Graduate Program content' },
+        { title: 'Tracking', content: 'Tracking content' },
+        { title: 'Resident Training', content: 'Resident Training content' },
+        { title: 'Consultation', content: 'Consultation content' },
+        { title: 'Basic Program', content: 'Basic Program content' },
+        { title: 'Puppy School', content: 'Puppy School content' }
       ];
       const resp = {data: pages};
       const wrapper = shallow(<App />);
@@ -71,18 +73,18 @@ describe('<App />', () => {
       const getMock = jest.spyOn(axios, 'get');
       getMock.mockResolvedValue(resp)
       await instance.componentDidMount();
-      expect(wrapper.state()).toEqual(
+      expect(wrapper.state()).toEqual(//{...pages, token: undefined, user: undefined, dogs: undefined})
         {
-          home: { title: 'About', content: 'About content' },
-          about: { title: 'Training Programs', content: 'Training content' },
-          trainingPrograms: undefined,
-          groupClasses: undefined,
-          graduateProgram: undefined,
-          tracking: undefined,
-          residentTraining: undefined,
-          consultation: undefined,
-          basicProgram: undefined,
-          puppySchool: undefined,
+          home: { title: 'Home', content: 'Home content' },
+          about: { title: 'About', content: 'About content' },
+          trainingPrograms: { title: 'Training Programs', content: 'Training Programs content' },
+          groupClasses: { title: 'Group Classes', content: 'Group Classes content' },
+          graduateProgram: { title: 'Graduate Program', content: 'Graduate Program content' },
+          tracking: { title: 'Tracking', content: 'Tracking content' },
+          residentTraining: { title: 'Resident Training', content: 'Resident Training content' },
+          consultation: { title: 'Consultation', content: 'Consultation content' },
+          basicProgram: { title: 'Basic Program', content: 'Basic Program content' },
+          puppySchool: { title: 'Puppy School', content: 'Puppy School content' },
           token: undefined,
           user: undefined,
           dogs: undefined
