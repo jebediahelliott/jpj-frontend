@@ -10,20 +10,26 @@ body {
 .staticPage {
   /* text-align: center; */
   background: white;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
-  font: small-caps 2em/1.25em DoulosSILW;
+  font: small-caps 1.5em/1.25em DoulosSILW;
   margin-bottom: 3em;
+  clear: left;
+  overflow: auto;
 }
 
 h1 {
   font-weight: bold;
 }
 
+h3 {
+  text-align: center;
+}
+
 img {
-  max-width: 35px;
+  max-width: 5em;
   height: auto;
   float: left;
-  margin-right: .5em;
+  margin-right: 1em;
   padding-top: .3em;
 }
