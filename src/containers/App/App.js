@@ -23,45 +23,10 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      home: {},
-      about: {},
-      trainingPrograms: {},
-      groupClasses: {},
-      graduateProgram: {},
-      tracking: {},
-      residentTraining: {},
-      consultation: {},
-      basicProgram: {},
-      puppySchool: {},
       token: undefined,
       user: undefined,
       dogs: undefined
     }
-  }
-
-  fetchPages = () => {
-    axios.get('http://localhost:1337/pages')
-    .then(res => {
-      this.setState({
-        home: res.data[0],
-        about: res.data[1],
-        trainingPrograms: res.data[2],
-        groupClasses: res.data[3],
-        graduateProgram: res.data[4],
-        tracking: res.data[5],
-        residentTraining: res.data[6],
-        consultation: res.data[7],
-        basicProgram: res.data[8],
-        puppySchool: res.data[9]
-      })
-    })
-    .catch(error => {
-      console.log('An error occurred:', error);
-    })
-  }
-
-  componentDidMount() {
-    this.fetchPages()
   }
 
   handleLogin = (response) => {
@@ -110,3 +75,28 @@ class App extends Component {
 }
 
 export default (App);
+
+// fetchPages = () => {
+//   axios.get('http://localhost:1337/pages')
+//   .then(res => {
+//     this.setState({
+//       home: res.data[0],
+//       about: res.data[1],
+//       trainingPrograms: res.data[2],
+//       groupClasses: res.data[3],
+//       graduateProgram: res.data[4],
+//       tracking: res.data[5],
+//       residentTraining: res.data[6],
+//       consultation: res.data[7],
+//       basicProgram: res.data[8],
+//       puppySchool: res.data[9]
+//     })
+//   })
+//   .catch(error => {
+//     console.log('An error occurred:', error);
+//   })
+// }
+//
+// componentDidMount() {
+//   this.fetchPages()
+// }

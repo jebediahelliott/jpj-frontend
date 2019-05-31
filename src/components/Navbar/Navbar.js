@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './Navbar.css';
+import img1 from '../images/IMG_0386.jpg'
+import img2 from '../images/IMG_0439.jpg'
+import img3 from '../images/IMG_0408.jpg'
+import img4 from '../images/IMG_0440.jpg'
+import img5 from '../images/IMG_0405.jpg'
+import bannerLogo from '../images/JPJtext2.jpeg'
 
 class Navbar extends Component {
 
@@ -75,8 +81,9 @@ class Navbar extends Component {
 }
 
 export default withRouter(Navbar);
-// <img src={img1} alt="asdf" />
-// <img src={img2} />
-// <img id ="logo" src={bannerLogo} />
-// <img src={img3} />
-// <img src={img4} />
+// <img src={img1} className="banner-image" alt="asdf" />
+// <img src={img2} className="banner-image" />
+// <img src={bannerLogo} className="banner-image" />
+// <img src={img3} className="banner-image" />
+// <img src={img4} className="banner-image" />
+// <img src={img5} className="banner-image" />
