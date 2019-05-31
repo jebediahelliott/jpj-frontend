@@ -9,8 +9,7 @@ class GroupClasses extends Component {
   render() {
     return(
       <div className='staticPage'>
-        <h1>{this.props.page.title}</h1>
-        <ReactMarkdown source={this.props.page.content} />
+        
       </div>
     )
   }
