@@ -56,7 +56,6 @@ class App extends Component {
             <Route path="/about" render={routerProps => <About {...routerProps} dogs={this.state.dogs} page={this.state.about} />} />
             <Route path="/training-programs" render={routerProps => <TrainingPrograms {...routerProps} page={this.state.trainingPrograms} />} />
             <Route path="/contact" component={Contact} />
-            <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
             <Route path="/consultation" render={routerProps => <Consultation {...routerProps} page={this.state.consultation} />} />
             <Route path="/puppy-school" render={routerProps => <PuppySchool {...routerProps} page={this.state.puppySchool} />} />
             <Route path="/basic-program" render={routerProps => <BasicProgram {...routerProps} page={this.state.basicProgram} />} />
@@ -64,7 +63,6 @@ class App extends Component {
             <Route path="/graduate-program" render={routerProps => <GraduateProgram {...routerProps} page={this.state.graduateProgram} />} />
             <Route path="/resident-training" render={routerProps => <ResidentTraining {...routerProps} page={this.state.residentTraining} />} />
             <Route path="/tracking" render={routerProps => <Tracking {...routerProps} page={this.state.tracking} />} />
-            <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dogs={this.state.dogs} user={this.state.user} /> : <Redirect to="/login" />} />
           </Switch>
           </div>
           <Footer />
@@ -76,27 +74,6 @@ class App extends Component {
 
 export default (App);
 
-// fetchPages = () => {
-//   axios.get('http://localhost:1337/pages')
-//   .then(res => {
-//     this.setState({
-//       home: res.data[0],
-//       about: res.data[1],
-//       trainingPrograms: res.data[2],
-//       groupClasses: res.data[3],
-//       graduateProgram: res.data[4],
-//       tracking: res.data[5],
-//       residentTraining: res.data[6],
-//       consultation: res.data[7],
-//       basicProgram: res.data[8],
-//       puppySchool: res.data[9]
-//     })
-//   })
-//   .catch(error => {
-//     console.log('An error occurred:', error);
-//   })
-// }
-//
-// componentDidMount() {
-//   this.fetchPages()
-// }
+// Routes to be used when site has user login capabilities
+// <Route path="/profile" render={routerProps => this.state.user ? <Profile {...routerProps} dogs={this.state.dogs} user={this.state.user} /> : <Redirect to="/login" />} />
+// <Route path="/login" render={routerProps => <Login {...routerProps} handleLogin={this.handleLogin} />} />
