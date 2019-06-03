@@ -4,7 +4,8 @@
 }
 
 #navBar {
-  margin: 0;
+  margin: auto;
+  max-width: 80%;
   border-bottom: 5px solid #F1CD4E;
   border-top: 5px solid #F1CD4E;
   background: rgb(132,14,5);
