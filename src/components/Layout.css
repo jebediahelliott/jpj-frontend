@@ -3,10 +3,6 @@
   src: url(./fonts/DoulosSIL-R.woff);
 }
 
-body {
-  background: #d3d3d3;
-}
-
 .staticPage {
   /* text-align: center; */
   background: white;
@@ -23,13 +19,5 @@ h1 {
 }
 
 h3 {
-  text-align: center;
-}
-
-img {
-  max-width: 5em;
-  height: auto;
-  float: left;
-  margin-right: 1em;
-  padding-top: .3em;
+  font-weight: bold;
 }

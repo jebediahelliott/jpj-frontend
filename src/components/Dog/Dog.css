@@ -1,0 +1,7 @@
+img {
+  max-width: 5em;
+  height: auto;
+  float: left;
+  margin-right: 1em;
+  padding-top: .3em;
+}
