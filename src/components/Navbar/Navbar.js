@@ -15,14 +15,8 @@ class Navbar extends Component {
     return (
       <div>
         <div className="banner">
-        <img src={img1} className="banner-image" />
-        <img src={img2} className="banner-image" />
-        <img src={img3} className="banner-image" />
-        <img src={bannerLogo} id="banner-logo" className="banner-image" />
-        <img src={img4} className="banner-image" />
-        <img src={img5} className="banner-image" />
-        <img src={img6} className="banner-image" />
-      </div>
+          <img src={bannerLogo} id="banner-logo" className="banner-image" />
+        </div>
         <nav id="navBar">
           <ul className="menu">
             <li><NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink></li>
@@ -48,6 +42,7 @@ class Navbar extends Component {
 }
 
 export default withRouter(Navbar);
+// <img src={img2} className="banner-image" />
 
 // Login link
 // <li><NavLink to="/login" className="link" activeStyle={{color: '#F1CD4E'}} exact>Log In</NavLink></li>
@@ -61,7 +56,12 @@ export default withRouter(Navbar);
 // <div id="banner-image5"></div>
 
 // imgage tags to use in place of divs with backgroung images
-
+// <img src={img1} className="banner-image" />
+// <img src={img3} className="banner-image" />
+// <img src={bannerLogo} id="banner-logo" className="banner-image" />
+// <img src={img4} className="banner-image" />
+// <img src={img5} className="banner-image" />
+// <img src={img6} className="banner-image" />
 
 // Navbar for logged in users
 // if (this.props.user) {

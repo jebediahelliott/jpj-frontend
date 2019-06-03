@@ -33,11 +33,14 @@
 .banner-image {
   max-height: 8em;
   object-fit: contain;
-  flex-grow: .75;
+}
+
+.banner-image:last-child {
+  margin-right: .5em;
 }
 
 #banner-logo {
-  flex-grow: 4;
+  height: 8em;
 }
 
 /* #banner-image1 {
