@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import './Navbar.css';
-import img1 from '../images/IMG_0386.jpg'
-import img2 from '../images/IMG_0439.jpg'
-import img3 from '../images/IMG_0408.jpg'
+import img1 from '../images/IMG_0485.jpg'
+import img2 from '../images/IMG_0487.jpg'
+import img3 from '../images/IMG_0488.jpg'
 import img4 from '../images/IMG_0440.jpg'
-import img5 from '../images/IMG_0405.jpg'
+import img5 from '../images/IMG_0486.jpg'
+import img6 from '../images/IMG_0496.jpg'
 import bannerLogo from '../images/JPJtext2.jpeg'
 
 class Navbar extends Component {
@@ -16,11 +17,12 @@ class Navbar extends Component {
         <div className="banner">
         <img src={img1} className="banner-image" />
         <img src={img2} className="banner-image" />
-        <img src={bannerLogo} id="banner-logo" className="banner-image" />
         <img src={img3} className="banner-image" />
+        <img src={bannerLogo} id="banner-logo" className="banner-image" />
         <img src={img4} className="banner-image" />
         <img src={img5} className="banner-image" />
-        </div>
+        <img src={img6} className="banner-image" />
+      </div>
         <nav id="navBar">
           <ul className="menu">
             <li><NavLink to="/" className="link" activeStyle={{color: '#F1CD4E'}} exact>Home</NavLink></li>
