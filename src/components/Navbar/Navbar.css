@@ -101,12 +101,12 @@
   flex-grow: 3;
 } */
 
-ul {
+#navBar ul {
   padding: 0;
   margin: 0;
 }
 
-ul li {
+#navBar ul li {
   list-style-type: none;
   height: 2.5em;
 }
