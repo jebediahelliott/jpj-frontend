@@ -30,7 +30,7 @@
   height: 8em;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 0px 16px 10px rgba(0,0,0,0.2);
+  opacity: 0.75;
 }
 
 .banner-image {
@@ -38,68 +38,9 @@
   object-fit: contain;
 }
 
-.banner-image:last-child {
-  margin-right: .5em;
-}
-
 #banner-logo {
   height: 8em;
 }
-
-/* #banner-image1 {
-  background-image: url('../images/IMG_0386.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-left: .5em;
-  margin-right: .25em;
-  flex-grow: 1;
-}
-
-#banner-image2 {
-  background-image: url('../images/IMG_0439.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 .25em;
-  flex-grow: 1;
-}
-
-#banner-image3 {
-  background-image: url('../images/IMG_0408.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 .25em;
-  flex-grow: .666;
-}
-
-#banner-image4 {
-  background-image: url('../images/IMG_0440.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 .25em;
-  flex-grow: .666;
-}
-
-#banner-image5 {
-  background-image: url('../images/IMG_0405.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin-right: .5em;
-  flex-grow: .666;
-}
-
-#banner-logo {
-  background-image: url('../images/JPJtext2.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  margin: 0 .25em;
-  flex-grow: 3;
-} */
 
 #navBar ul {
   padding: 0;
@@ -117,7 +58,7 @@
   align-items: center;
 }
 
-.dropdown {
+#navBar .dropdown {
   margin-top: 5px;
   background: #F1CD4E;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
