@@ -5,7 +5,7 @@
 
 .staticPage {
   /* text-align: center; */
-  background: white;
+  background: none;
   width: 80%;
   margin: 0 auto;
   font: small-caps 1.5em/1.25em DoulosSILW;
@@ -16,8 +16,14 @@
 
 h1 {
   font-weight: bold;
+  background-color: none;
 }
 
 h3 {
   font-weight: bold;
+  background: none;
+}
+
+p {
+  background: none;
 }
