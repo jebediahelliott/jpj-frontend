@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../../components/Home/Home';
 import About from '../../components/About/About';
 import TrainingPrograms from '../../components/TrainingPrograms/TrainingPrograms';
 import Contact from '../../components/Contact/Contact';
 import Navbar from '../../components/Navbar/Navbar';
-import Login from '../../components/Login/Login';
 import Footer from '../../components/Footer/Footer';
 import BasicProgram from '../../components/BasicProgram/BasicProgram';
 import Consultation from '../../components/Consultation/Consultation';
@@ -15,8 +14,6 @@ import GroupClasses from '../../components/GroupClasses/GroupClasses';
 import PuppySchool from '../../components/PuppySchool/PuppySchool';
 import ResidentTraining from '../../components/ResidentTraining/ResidentTraining';
 import Tracking from '../../components/Tracking/Tracking';
-import Profile from '../../components/Profile/Profile';
-import axios from 'axios'
 
 
 class App extends Component {
